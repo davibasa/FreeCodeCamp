@@ -2,7 +2,7 @@ import numpy as np
 
 def calculate(lst):
     if len(lst) != 9:
-        raise ValueError("A lista deve conter exatamente 9 números.")
+        raise ValueError("List must contain nine numbers.")
     
     # Converter a lista em uma matriz 3x3
     matrix = np.array(lst).reshape(3, 3)
@@ -16,5 +16,4 @@ def calculate(lst):
         'min': [np.min(matrix, axis=0).tolist(), np.min(matrix, axis=1).tolist(), np.min(matrix).tolist()],
         'sum': [np.sum(matrix, axis=0).tolist(), np.sum(matrix, axis=1).tolist(), np.sum(matrix).tolist()]
     }
-    
     return calculations
